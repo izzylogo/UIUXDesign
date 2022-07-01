@@ -48,3 +48,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient__line{
+  width: 30px;
+  height: 3px;
+  background: $gradient-bar;
+  margin-bottom: 7px;
+}

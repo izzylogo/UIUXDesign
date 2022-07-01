@@ -1,0 +1,31 @@
+.feature{
+    padding: 25px 50px;
+    display: flex;
+    gap: 100px;
+    align-items: baseline;
+    justify-content: center;
+
+    .first{
+        .first-text{
+            font-size: 10px;
+        }
+    }
+
+    .second{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .feature{
+        flex-direction: column;
+        .first{
+            display: flex;
+            flex-direction: column-reverse !important;  
+        }
+
+        .second{
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import './App.scss';
 import Companies from './components/Companies';
+import Feature from './components/Feature';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Whatisgpx from './components/Whatisgpx';
@@ -13,6 +14,7 @@ function App() {
       </div>
       <Companies/>
       <Whatisgpx/>
+      <Feature/>
     </div>
   );
 }

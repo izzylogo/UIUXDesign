@@ -1,0 +1,29 @@
+@import './color';
+
+.featDet{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 20px;
+    // gap: 40px;
+    
+    .featLeft{
+        .subject{
+            color: #fff;
+            width: 50%;
+        }
+    }
+    .featRight{
+        color: $color-text;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .featDet {
+        display: block;
+        .featLeft{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+}
