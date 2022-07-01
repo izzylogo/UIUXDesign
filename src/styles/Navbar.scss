@@ -72,7 +72,7 @@
             padding: 10px 20px;
             text-align: right;
             line-height: 0px;
-            animation: untoggle 2s ease;
+            animation: untoggle 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
             -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
             -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
@@ -93,14 +93,14 @@
         }
         .active{
             display: block;
-            position: absolute;
+            position: fixed;
             right: 10%;
             top: 11%;
             background-color: $color-blog;
             padding: 10px 20px;
             text-align: right;
             line-height: 0px;
-            animation: toggle 2s ease-in;
+            animation: toggle 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
             -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
             -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
@@ -116,11 +116,32 @@
                 }
             }
         }
-    
-        
     }
-  
 }
+
+
+
+@keyframes toggle {
+    
+    from{
+        right: -50%;
+    }
+    to{
+        right: 10%;
+    }
+}
+
+@keyframes untoggle {
+    from{
+        right: 10%;
+    }
+    to{
+        right: -50%;
+    }
+
+    
+}
+
 
 // @media screen and (max-width: 830px) {
 //     .navbar{
@@ -204,33 +225,3 @@
         
 //     }
 // }
-
-@keyframes toggle {
-    0%{
-        right: -50%;
-    }
-    25%{
-        right: -25%;
-    }
-    50%{
-        right: 0%;
-    }
-    75%{
-        right: 5%;
-    }
-    100%{
-        right: 10%;
-    }
-}
-
-@keyframes untoggle {
-    0%{
-        right: 10%;
-    }
-    50%{
-        right: 0%;
-    }
-    100%{
-        right: -100%;
-    }
-}
