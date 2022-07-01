@@ -1,0 +1,236 @@
+@import './color';
+@import './mixin';
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 25px 55px;
+
+    .side{
+        display: flex;
+        gap: 50px;
+    }
+    .logo{
+        width: 80px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+
+        h3{
+            font-weight: 900;
+        }
+
+        li{
+            list-style: none;
+        }
+    }
+    .sign{
+        display: flex;
+        align-items: center;
+        p{
+            margin-right: 10px;
+        }
+        button {
+            @include button
+        }
+    }
+    .menu{
+        display: none;
+    }
+    .menu-list{
+        display: none;
+    }
+
+    .icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .navbar{
+        padding: 30px 40px;
+        .side ul{
+            display: none;
+        }
+        .sign{
+            display: none !important;
+        }
+        .menu{
+            display: block !important;
+        }
+        
+        .menu-list{
+            display: block !important;
+            position: fixed;
+            right: -50%;
+            top: 11%;
+            background-color: $color-blog;
+            padding: 10px 20px;
+            text-align: right;
+            line-height: 0px;
+            animation: untoggle 2s ease;
+            box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+            -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+            -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+    
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding: 10px 15px;
+    
+                button{
+                    @include button;
+                }
+            }
+        }
+    
+        .icon{
+            display: block !important;
+        }
+        .active{
+            display: block;
+            position: absolute;
+            right: 10%;
+            top: 11%;
+            background-color: $color-blog;
+            padding: 10px 20px;
+            text-align: right;
+            line-height: 0px;
+            animation: toggle 2s ease-in;
+            box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+            -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+            -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+    
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding: 10px 15px;
+    
+    
+                button{
+                    @include button;
+                }
+            }
+        }
+    
+        
+    }
+  
+}
+
+// @media screen and (max-width: 830px) {
+//     .navbar{
+//         padding: 30px 40px;
+//         .side ul{
+//             display: none;
+//         }
+//         .sign{
+//             display: flex !important;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//         .menu{
+//             display: block !important;
+//         }
+        
+//         .menu-list{
+//             display: block !important;
+//             position: fixed;
+//             right: -50%;
+//             top: 11%;
+//             background-color: $color-blog;
+//             padding: 30px 20px;
+//             text-align: right;
+//             line-height: 0px;
+//             animation: untoggle 2s ease;
+//             box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+//             -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+//             -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+    
+//             ul{
+//                 display: flex;
+//                 flex-direction: column;
+//                 padding: 10px 15px;
+
+//                 li:nth-child(6){
+//                     display: none !important;
+//                 }
+    
+//                 button{
+//                     @include button;
+//                     display: none;
+//                 }
+//             }
+//         }
+    
+//         .icon{
+//             display: block !important;
+//         }
+//         .active{
+//             display: block;
+//             position: absolute;
+//             right: 10%;
+//             top: 11%;
+//             background-color: $color-blog;
+//             padding: 30px 20px;
+//             text-align: right;
+//             line-height: 0px;
+//             animation: toggle 2s ease-in;
+//             box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+//             -webkit-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+//             -moz-box-shadow: 1px 2px 21px 1px rgba(5,45,86,0.75);
+    
+//             ul{
+//                 display: flex;
+//                 flex-direction: column;
+//                 padding: 10px 15px;
+
+//                 li:nth-child(6){
+//                     display: none !important;
+//                 }
+    
+    
+//                 button{
+//                     @include button;
+//                     display: none;   
+//                 }
+//             }
+//         }
+    
+        
+//     }
+// }
+
+@keyframes toggle {
+    0%{
+        right: -50%;
+    }
+    25%{
+        right: -25%;
+    }
+    50%{
+        right: 0%;
+    }
+    75%{
+        right: 5%;
+    }
+    100%{
+        right: 10%;
+    }
+}
+
+@keyframes untoggle {
+    0%{
+        right: 10%;
+    }
+    50%{
+        right: 0%;
+    }
+    100%{
+        right: -100%;
+    }
+}

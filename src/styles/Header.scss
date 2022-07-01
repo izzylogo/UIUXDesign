@@ -1,0 +1,114 @@
+@import './color';
+@import './mixin';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 55px;
+    
+    .left{
+        h1{
+            font-size: 50px;
+            color: $gradient-text;
+        }
+    
+        .desc{
+            color: $color-text;
+            margin: 20px 0;
+        }
+
+        form{
+            input{
+                background-color: #052D56;
+                border: 1px solid transparent;
+                height: 43px;
+                width: 435px;
+                border-bottom-left-radius: 8px;
+                border-top-left-radius: 8px;
+                outline: none;
+                padding: 10px;
+                color: #fff;
+            }
+            button{
+                height: 43px;
+                color: #fff;
+                @include button;
+                border-bottom-left-radius: 0px;
+                border-top-left-radius: 0px;
+            }
+        }
+        .people{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            color: #fff;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            p{
+                font-size: 10px;
+            }
+        }
+
+    }
+
+    .right img{
+        width: 480px;
+        
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .header{
+        flex-direction: column;
+        padding: 10px 40px;
+
+        .left{
+            h1{
+                font-size: 45px;
+            }
+            form {
+                input{
+                    width: 180px;
+                }
+                
+            }
+            
+            .people{
+                justify-content: left;
+            }
+        }
+        .right img {
+            width: 300px;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .header{
+        .left{
+            h1{
+                font-size: 42px;
+            }
+        }
+        .right img{
+            width: 350px;
+        }
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .header{
+        .left{
+            h1{
+                font-size: 60px;
+            }
+        }
+        .right img{
+            width: 550px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import './color';
+
+@mixin  button {
+    padding: 10px 15px;
+    background-color: $color-button;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    border: 1px solid transparent;
+}

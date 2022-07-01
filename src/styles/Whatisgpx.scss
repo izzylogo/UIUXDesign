@@ -1,0 +1,113 @@
+@import './color';
+
+.gpx{
+    padding: 25px 55px;  
+    .contain{
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 17% 27%, rgba(20, 75, 133, 1) 0%, rgba(4, 44, 84, 1) 39%, rgba(16, 68, 123, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 17% 27%, rgba(20, 75, 133, 1) 0%, rgba(4, 44, 84, 1) 39%, rgba(16, 68, 123, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 17% 27%, rgba(20, 75, 133, 1) 0%, rgba(4, 44, 84, 1) 39%, rgba(16, 68, 123, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 17% 27%, rgba(20, 75, 133, 1) 0%, rgba(4, 44, 84, 1) 39%, rgba(16, 68, 123, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 17% 27%, rgba(20, 75, 133, 1) 0%, rgba(4, 44, 84, 1) 39%, rgba(16, 68, 123, 1) 100%);
+    padding: 40px 45px;
+        
+    // margin-bottom: ;
+    
+        .what{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            // gap: 10px;
+           
+            .left{
+                .line{
+                    width: 30px;
+                    height: 3px;
+                    background: $gradient-bar;
+                    margin-bottom: 7px;
+                }
+                h4{
+                    color: #fff;
+                }
+            }
+
+            .right{ 
+                max-width: 70%;
+                margin-top: 6px;
+                color: $color-text;
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+        .int{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            color: $gradient-text;
+            margin: 70px 0px;
+            .left-int{
+                h3{
+                    width: 70%;
+                    font-size: 25px;
+                }
+            }
+        }
+        .contBox{
+            display: flex;
+            // flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .contain{
+        .what{
+            flex-direction: column;
+            
+        }
+        .int{
+            flex-direction: column-reverse;
+
+            .left-int{
+                margin-top: 20px;
+            }
+        }
+        .contBox{
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .contain{
+        .what{
+            .right{
+                max-width: 100% !important;
+                p{
+                    font-size: 11px !important;
+                    width: 100%;
+                }
+            }
+        }
+        .int{
+            h3{
+                width: 100% !important;
+            }
+        }
+    }
+}
+
