@@ -1,6 +1,9 @@
 import './App.scss';
+import Blog from './components/Blog';
 import Companies from './components/Companies';
+import CTA from './components/CTA';
 import Feature from './components/Feature';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Possibilities from './components/Possibilities';
@@ -17,6 +20,9 @@ function App() {
       <Whatisgpx/>
       <Feature/>
       <Possibilities/>
+      <CTA/>
+      <Blog/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,115 @@
+@import './color';
+
+.footer{
+    background-color: $color-footer;
+    margin-top: 60px;
+    padding: 60px 55px 30px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    
+    .fHeader{
+        width: 50%;
+        h1{
+            font-size: 55px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .btn{
+        button{
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 10px;
+            margin-top: 50px;
+        }
+    }
+    .foot{
+        width: 100%; 
+    }
+    .footBot{
+        display: flex;
+        // width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 60px;
+        margin-top: 100px;
+        .logos{
+            
+            p{
+                font-size: 10px;
+                color: #ffff;
+            }
+        }
+        .info{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            align-items: baseline;
+            // gap: 60px;
+            .link{
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h6{
+                    font-size: 16px;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    li{
+                        font-size: 10px;
+                        font-weight: lighter;
+                        list-style: none;
+                    }
+                }
+            }
+        }
+    }
+    .last{
+        margin-top: 60px;
+        p{
+            color: #fff;
+            font-size: 10px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 780px) {
+    .footer{
+        .fHeader{
+            width: 100% !important;
+            h1{
+                font-size: 30px;
+            }
+        }
+        .footBot{
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .info{
+                width: 100%;
+                .link{
+                    h6{
+                        font-size: 13px;
+                    }
+                    ul{
+                        li{
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import './color';
+
+
+.cta{
+    padding: 25px 55px;
+    .ctacover{
+        display: flex;
+        height: 130px;
+        align-items: center;
+        justify-content: space-around;
+        background: $gradient-bar;
+        border-radius: 5px;
+        gap: 100px;
+        // flex-wrap: wrap;
+        .topic{
+            p{
+                font-size: 10px;
+            }
+        }
+        
+        button{
+            background-color: black;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            // letter-spacing: 0.05cm;
+        }
+
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .cta{
+        .ctacover{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0px;
+            padding: 10px 20px;
+            height: 200px;
+        }
+    }
+}

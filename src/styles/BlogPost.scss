@@ -1,0 +1,56 @@
+@import './color';
+
+.blogpost{
+    width: 300px;
+    border-top-left-radius: 30px;
+    // height: 100%;
+    background-color: $color-blog;
+    padding-bottom: 50px;
+    height: 100%;
+    .blogpic{
+        width: 300px;
+        
+    }
+    .writeup{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;   
+        padding: 8px 13px;
+        height: 100%;
+        
+        p{
+            color: $color-text;
+            font-size: 10px;
+            
+        }
+        .bot{
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            width: inherit;
+            justify-content: space-between;
+        }
+        h4{
+            color: #fff;
+            margin-top: 20px;
+        }
+        .buttom{
+            align-content: flex-end;
+            display: flex;
+            justify-content: bottom;
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .blogpost{
+        width: 250px;
+        .blogpic{
+            width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    
+}
