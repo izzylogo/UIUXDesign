@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/Whatisgpx.scss'
 import Gpts from './Gpts'
+import { motion, Variants } from 'framer-motion'
+
 
 const Whatisgpx = () => {
   return (
