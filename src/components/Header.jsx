@@ -29,8 +29,8 @@ const pAnimate={
 }
 
 const formAnimate={
-  offscreen:{x: -1000},
-  onscreen:{x: 0,
+  offscreen:{x: -1000, opacity: 0},
+  onscreen:{x: 0, opacity: [0.5, 1],
     transition: {
       type: 'spring',
       bounce: 0.3,
@@ -52,13 +52,25 @@ const pplAnimate={
   }
 }
 
+// const imgAnimate={
+//   offscreen:{x: -1000},
+//   onscreen:{x: 0,
+//     transition: {
+//       type: 'spring',
+//       bounce: 0.3,
+//       delay: 1.9,
+//       duration: 2.8
+//     }
+//   }
+// }
+
 const Header = () => {
   return (
     <div className='header'>
       <motion.div className="left"
         initial={'offscreen'}
         whileInView={'onscreen'}
-        viewport={{once:false, amount:0.3 }}
+        viewport={{once:false, amount:0.3}}
         transition={{staggerChildren:0.5}}
       >
         <motion.h1 className='gradient__text'
@@ -82,9 +94,13 @@ const Header = () => {
           <p>1,600 people requested access a visit in last 24 hours</p>
         </motion.div>
       </motion.div>
-      <div className="right">
-        <img src={pic} alt="ai" />
-      </div>
+      <motion.div className="right" >
+        <motion.img src={pic} alt="ai"
+          initial={{x: 2000}}
+          animate={{x: 0}}
+          transition={{duration: 1, delay: 2.3, bounce: 0.4, type: 'spring'}}
+        />
+      </motion.div>
     </div>
   )
 }
