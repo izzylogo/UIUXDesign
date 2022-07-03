@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/BlogPost.scss'
-import blog1 from '../assets/blog01.png'
+
 
 const BlogPost = ({img, name}) => {
   return (

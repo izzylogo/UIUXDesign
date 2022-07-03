@@ -1,14 +1,28 @@
 import React from 'react'
 import '../styles/Feature.scss'
 import FeatureDet from './FeatureDet'
+import { motion, Variants } from 'framer-motion'
+
+
+const move={
+  offscreen:{x: -50,opacity: 0,display: 'none'},
+ onscreen:{ x: 0,opacity: 1, display: 'block', transition: { duration: 1, type: 'spring'}}
+}
 
 const Feature = () => {
   return (
-    <div className='feature'>
-      <div className="first">
+    <motion.div className='feature'
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      viewport={{once:false, amount:0.6}}
+      transition={{staggerChildren:0.5}}
+    >
+      <motion.div className="first"
+        variants={move}
+      >
           <h2 className="gradient__text">The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</h2>
           <p className='gradient__text first-text'>Request Early Access to Get Started</p>
-      </div>
+      </motion.div>
       <div className="second">
           <FeatureDet 
             className='secondFeat'
@@ -31,7 +45,7 @@ const Feature = () => {
             info='Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.'
           />
       </div>
-    </div>
+    </motion.div>
   )
 }
 
