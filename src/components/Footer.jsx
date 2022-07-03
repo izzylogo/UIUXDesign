@@ -10,12 +10,12 @@ const move={
 
 const moveR={
     offscreen:{x: -30,opacity: 0,display: 'none'},
-    onscreen:{ x: 0,opacity: 1, display: 'block', transition: { duration: 1, delay: 1.2, type: 'spring'}}
+    onscreen:{ x: 0,opacity: 1, display: 'block', transition: { duration: 1, delay: 1, type: 'spring'}}
 }
 
 const moveL={
     offscreen:{x: 30,opacity: 0,},
-    onscreen:{ x: 0,opacity: 1, transition: { duration: 1, delay: 1.2, type: 'spring'}}
+    onscreen:{ x: 0,opacity: 1, transition: { duration: 1, delay: 1, type: 'spring'}}
   }
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
             initial={'offscreen'}
             whileInView={'onscreen'}
             viewport={{once:false, amount:0.6}}
-            transition={{staggerChildren:0.7}}
+            transition={{staggerChildren:0.6}}
         >
             <div className="footBot">
                 <motion.div className="logos"
@@ -53,7 +53,7 @@ const Footer = () => {
                     initial={'offscreen'}
                     whileInView={'onscreen'}
                     viewport={{once:false, amount:0.6}}
-                    transition={{staggerChildren:0.7}}
+                    transition={{staggerChildren:0.6}}
                 >
                     <motion.div className="link" variants={moveL}>
                         <h6>Links</h6>

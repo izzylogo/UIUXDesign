@@ -16,7 +16,7 @@ const move={
 
 const moveL={
   offscreen:{x: 30,opacity: 0,},
-  onscreen:{ x: 0,opacity: 1, transition: { duration: 1, type: 'spring'}}
+  onscreen:{ x: 0,opacity: 1, transition: { duration: 0.5, type: 'spring'}}
 }
 
 
@@ -34,7 +34,7 @@ const Blog = () => {
             <br /> We are blogging about it.
         </motion.h1>
         <motion.div className="blogdet"
-          variants={moveL}
+          // variants={moveL}
         >
             <BlogPost img={blog1} className='blog1' name={blog1}/>
             <div className="blogGrid">
