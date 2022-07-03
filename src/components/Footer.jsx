@@ -4,18 +4,18 @@ import logo from '../assets/logo.svg'
 import { motion, Variants } from 'framer-motion'
 
 const move={
-    offscreen:{y: -80,opacity: 0,display: 'none'},
-   onscreen:{ y: 0,opacity: 1, display: 'block', transition: { duration: 1, type: 'spring'}}
+    offscreen:{y: -30,opacity: 0,display: 'none'},
+   onscreen:{ y: 0,opacity: 1, display: 'block', transition: { duration: 0.5, delay: 0.5, type: 'spring'}}
 }
 
 const moveR={
-    offscreen:{x: -60,opacity: 0,display: 'none'},
-    onscreen:{ x: 0,opacity: 1, display: 'block', transition: { duration: 1, type: 'spring'}}
+    offscreen:{x: -30,opacity: 0,display: 'none'},
+    onscreen:{ x: 0,opacity: 1, display: 'block', transition: { duration: 1, delay: 1.2, type: 'spring'}}
 }
 
 const moveL={
     offscreen:{x: 30,opacity: 0,},
-    onscreen:{ x: 0,opacity: 1, transition: { duration: 1, type: 'spring'}}
+    onscreen:{ x: 0,opacity: 1, transition: { duration: 1, delay: 1.2, type: 'spring'}}
   }
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
     <motion.div className='footer'
         initial={'offscreen'}
         whileInView={'onscreen'}
-        viewport={{once:false, amount:0.6}}
+        viewport={{once:false, amount:0.2}}
         transition={{staggerChildren:0.5}}
     >
         <motion.div className="fHeader"
