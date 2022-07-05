@@ -23,7 +23,7 @@ const Footer = () => {
     <motion.div className='footer'
         initial={'offscreen'}
         whileInView={'onscreen'}
-        viewport={{once:false, amount:0.2}}
+        viewport={{once:true, amount:0.2}}
         transition={{staggerChildren:0.5}}
     >
         <motion.div className="fHeader"
@@ -39,7 +39,7 @@ const Footer = () => {
         <motion.div className="foot"
             initial={'offscreen'}
             whileInView={'onscreen'}
-            viewport={{once:false, amount:0.6}}
+            viewport={{once:true, amount:0.6}}
             transition={{staggerChildren:0.6}}
         >
             <div className="footBot">
@@ -52,7 +52,7 @@ const Footer = () => {
                 <motion.div className="info"
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{once:false, amount:0.6}}
+                    viewport={{once:true, amount:0.6}}
                     transition={{staggerChildren:0.6}}
                 >
                     <motion.div className="link" variants={moveL}>

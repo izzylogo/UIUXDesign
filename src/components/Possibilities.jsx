@@ -19,7 +19,7 @@ const Possibilities = () => {
     <motion.div className='possible'
       initial={'offscreen'}
       whileInView={'onscreen'}
-      viewport={{once:false, amount:0.6}}
+      viewport={{once:true, amount:0.6}}
       transition={{staggerChildren:0.5}}
     >
         <motion.div className="left"

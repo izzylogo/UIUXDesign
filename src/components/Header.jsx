@@ -70,7 +70,7 @@ const Header = () => {
       <motion.div className="left"
         initial={'offscreen'}
         whileInView={'onscreen'}
-        viewport={{once:false, amount:0.3}}
+        viewport={{once:true, amount:0.3}}
         transition={{staggerChildren:0.5}}
       >
         <motion.h1 className='gradient__text'

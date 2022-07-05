@@ -21,7 +21,7 @@ const Whatisgpx = () => {
         <motion.div className="what"
           initial={'offscreen'}
           whileInView={'onscreen'}
-          viewport={{once:false, amount:0.6}}
+          viewport={{once:true, amount:0.6}}
           transition={{staggerChildren:0.5}}
         >
           <motion.div className="left"
@@ -47,7 +47,7 @@ const Whatisgpx = () => {
         <motion.div className="int"
           initial={'offscreen'}
           whileInView={'onscreen'}
-          viewport={{once:false, amount:0.8}}
+          viewport={{once:true, amount:0.8}}
           transition={{staggerChildren:0.5}}
         >
           <motion.div className="left-int"
