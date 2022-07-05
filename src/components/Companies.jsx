@@ -10,14 +10,14 @@ import { motion, Variants } from 'framer-motion'
 
 const compAnimate={
   offscreen:{opacity: 0},
-  onscreen:{opacity: 1, transition: {delay: 1, duration: 1}}
+  onscreen:{opacity: 1, transition: {delay: 0.9, duration: 1}}
 }
 const Companies = () => {
   return (
     <motion.div className='company'
       initial={'offscreen'}
       whileInView={'onscreen'}
-      viewport={{once:true, amount:1}}
+      viewport={{once:false, amount:1}}
       variants={compAnimate}
     >
        <img src={google} alt="" />
